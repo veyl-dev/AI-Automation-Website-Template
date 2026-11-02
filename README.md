@@ -3,7 +3,7 @@
 A responsive AI SaaS website and dashboard UI kit for an AI workflow and automation product. Built with plain HTML, CSS, and JavaScript — no build step or framework required.
 
 ## Included
-- Editorial dark visual system with electric-lime accents
+- Premium dark visual system with a restrained soft-lime accent palette
 - Responsive navigation and mobile menu
 - Hero workflow preview with animated floating cards
 - Scroll reveal animations using Intersection Observer
