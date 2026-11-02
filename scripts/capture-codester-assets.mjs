@@ -5,7 +5,7 @@ await mkdir('dist/screenshots', { recursive: true });
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
 await page.goto(base, { waitUntil: 'networkidle' });
-await page.screenshot({ path: 'dist/screenshots/01-homepage.png', fullPage: true });
+await page.screenshot({ path: 'dist/screenshots/01-homepage.png' });
 for (const [name, selector] of [['02-workflows', '#workflows'], ['03-integrations', '#integrations'], ['04-pricing-faq', '#pricing']]) {
   const el = page.locator(selector);
   await el.scrollIntoViewIfNeeded();
@@ -14,7 +14,7 @@ for (const [name, selector] of [['02-workflows', '#workflows'], ['03-integration
 }
 await page.setViewportSize({ width: 390, height: 844 });
 await page.goto(base, { waitUntil: 'networkidle' });
-await page.screenshot({ path: 'dist/screenshots/05-mobile.png', fullPage: true });
+await page.screenshot({ path: 'dist/screenshots/05-mobile.png' });
 await page.goto(base + '/assets/img/codester-preview.svg', { waitUntil: 'load' });
 await page.setViewportSize({ width: 800, height: 400 });
 await page.screenshot({ path: 'dist/codester-preview.png' });
