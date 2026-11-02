@@ -25,13 +25,13 @@ Open index.html for the landing page or dashboard.html for the workspace UI, or 
 Then visit http://localhost:8000.
 
 ## Customize
-1. Open `assets/js/config.js` and set the brand name, logo mark, contact email, theme colors, fonts, workspace name, and profile details.
-2. Replace fictional copy, pricing, testimonials, metrics, and integration examples with accurate product information. Change the placeholder contact address (`hello@yourdomain.com`) in `assets/js/config.js` before launch.
+1. Open `assets/js/config.js` and set the brand name, logo mark, theme colors, fonts, workspace name, and profile details. Add your own contact email only if you want the email-based CTA links enabled.
+2. Replace fictional copy, pricing, testimonials, metrics, and integration examples with accurate product information. If you add a contact email in `assets/js/config.js`, the email-based CTA links will use that address.
 3. Edit workflow examples in `assets/js/main.js`.
 4. Customize detailed styles in `assets/css/style.css` and `assets/css/dashboard.css`.
 5. Review all navigation and CTA destinations, then test both pages on desktop and mobile.
 
-The shared configuration keeps core branding and theme settings consistent across the landing page and dashboard.
+The shared configuration keeps core branding and theme settings consistent across the landing page and dashboard. The contact email is blank by default; buyers supply their own address if they want email-based CTAs.
 
 ## Deploy with GitHub Pages
 In repository Settings, open Pages, choose Deploy from a branch, select main and / (root), then save. The included .nojekyll file keeps GitHub Pages from applying Jekyll processing.
