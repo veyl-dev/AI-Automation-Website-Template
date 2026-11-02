@@ -35,16 +35,16 @@ jobs:
       - name: Assemble buyer source ZIP
         run: |
           mkdir -p dist/package
-          cp index.html README.md DOCUMENTATION.md CHANGELOG.md LICENSE dist/package/
+          cp index.html dashboard.html README.md DOCUMENTATION.md CHANGELOG.md LICENSE dist/package/
           cp -R assets dist/package/
           cd dist/package
-          zip -r ../Flowstate-AI-Automation-Website-Template-v1.0.0.zip .
+          zip -r ../Flowstate-AI-Automation-Website-Template-v1.1.0.zip .
           cd ..
           zip -r Flowstate-Codester-Screenshots.zip screenshots
       - name: Upload submission assets
         uses: actions/upload-artifact@v4
         with:
-          name: codester-submission-v1.0.0
+          name: codester-submission-v1.1.0
           path: |
             dist/Flowstate-AI-Automation-Website-Template-v1.0.0.zip
             dist/Flowstate-Codester-Screenshots.zip
