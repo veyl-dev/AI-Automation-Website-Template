@@ -25,11 +25,13 @@ Open index.html for the landing page or dashboard.html for the workspace UI, or 
 Then visit http://localhost:8000.
 
 ## Customize
-1. Replace the fictional Flowstate brand, copy, and links in index.html.
-2. Update colors and typography in the root variables in assets/css/style.css.
-3. Edit the workflow examples in the templates object in assets/js/main.js.
-4. Replace illustrative pricing, integrations, and testimonial content with real product information.
-5. Update the contact email links before publishing.
+1. Open `assets/js/config.js` and set the brand name, logo mark, contact email, theme colors, fonts, workspace name, and profile details.
+2. Replace fictional copy, pricing, testimonials, metrics, and integration examples with accurate product information.
+3. Edit workflow examples in `assets/js/main.js`.
+4. Customize detailed styles in `assets/css/style.css` and `assets/css/dashboard.css`.
+5. Review all navigation and CTA destinations, then test both pages on desktop and mobile.
+
+The shared configuration keeps core branding and theme settings consistent across the landing page and dashboard.
 
 ## Deploy with GitHub Pages
 In repository Settings, open Pages, choose Deploy from a branch, select main and / (root), then save. The included .nojekyll file keeps GitHub Pages from applying Jekyll processing.
