@@ -1,15 +1,15 @@
 # Codester listing draft
 
 ## Product title
-Flowstate — AI Automation & SaaS Landing Page Template
+Flowstate — AI Automation SaaS Website & Dashboard UI Kit
 
 ## Short description (under 130 characters)
-Animated AI automation and SaaS landing page template built with responsive HTML, CSS and vanilla JavaScript.
+Responsive AI SaaS landing page and dashboard UI kit built with HTML, CSS and vanilla JavaScript.
 
 ## Full description
-Give your AI, automation, or SaaS product a polished online presence with Flowstate. This modern dark landing page template pairs a clean editorial layout with electric-lime accents, animated workflow visuals, and responsive sections designed to help explain your product.
+Give your AI, automation, or SaaS product a polished online presence and product interface with Flowstate. This modern dark landing page template pairs a clean editorial layout with electric-lime accents, animated workflow visuals, and responsive sections designed to help explain your product.
 
-Built with plain HTML, CSS, and vanilla JavaScript, Flowstate is easy to customize and does not require a framework, build process, or paid dependency. Use the interactive workflow examples to demonstrate sales automation, support triage, content operations, or internal team processes.
+Built with plain HTML, CSS, and vanilla JavaScript, Flowstate includes both a marketing landing page and a multi-view workspace dashboard. It is easy to customize and does not require a framework, build process, or paid dependency. Use the interactive workflow examples to demonstrate sales automation, support triage, content operations, or internal team processes.
 
 ### Highlights
 - Modern dark UI with a distinctive lime accent palette
@@ -19,12 +19,15 @@ Built with plain HTML, CSS, and vanilla JavaScript, Flowstate is easy to customi
 - Interactive workflow template switcher with four examples
 - Feature, integrations, testimonial, pricing, and FAQ sections
 - Mobile navigation menu
+- Separate SaaS dashboard UI kit with Overview, Workflows, Integrations, Activity, and Settings views
+- Dashboard KPI cards, charts, workflow table, integration cards, activity timeline, and settings form
+- Interactive dashboard navigation, workflow search and status filters, responsive sidebar, and demo notifications
 - Reduced-motion accessibility support
 - Organized source files and setup documentation
 - No framework or build step required
 
 ### Files included
-- HTML landing page
+- HTML landing page and dashboard demo
 - CSS stylesheet
 - Vanilla JavaScript interactions
 - SVG favicon and brand assets
@@ -37,7 +40,7 @@ Built with plain HTML, CSS, and vanilla JavaScript, Flowstate is easy to customi
 - Optional internet connection for Google Fonts
 
 ### Important
-This is a frontend website template. It does not include a live AI engine, workflow execution backend, authentication, user accounts, billing, database, contact form processing, or admin dashboard. Pricing, testimonial, metrics, and integration examples are demonstration content and should be replaced with your own accurate product information.
+This is a frontend UI kit. It does not include a live AI engine, workflow execution backend, authentication, user accounts, billing, database, or real integration connections. Dashboard controls use illustrative sample data and demo interactions only. Pricing, testimonial, metrics, and integration examples are demonstration content and should be replaced with your own accurate product information.
 
 ## Suggested category
 HTML / Website Templates (choose the closest available Codester category during upload).
@@ -46,7 +49,7 @@ HTML / Website Templates (choose the closest available Codester category during 
 ai, automation, saas, landing page, html template, website template, responsive, dark theme, workflow, startup
 
 ## Version
-1.0.0
+1.1.0
 
 ## Suggested price
 Choose a price after comparing similar Codester HTML templates and considering the final preview quality and support you plan to provide.
