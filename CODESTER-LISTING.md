@@ -49,7 +49,7 @@ HTML / Website Templates (choose the closest available Codester category during 
 ai, automation, saas, landing page, html template, website template, responsive, dark theme, workflow, startup
 
 ## Version
-1.1.0
+1.2.0
 
 ## Suggested price
 Choose a price after comparing similar Codester HTML templates and considering the final preview quality and support you plan to provide.
