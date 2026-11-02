@@ -2,6 +2,8 @@ name: Build Codester submission package
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     tags:
       - 'v*'
 permissions:
