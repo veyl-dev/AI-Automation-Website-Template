@@ -7,12 +7,12 @@ Flowstate — AI Automation SaaS Website & Dashboard UI Kit
 Responsive AI SaaS landing page and dashboard UI kit built with HTML, CSS and vanilla JavaScript.
 
 ## Full description
-Give your AI, automation, or SaaS product a polished online presence and product interface with Flowstate. This modern dark landing page template pairs a clean editorial layout with electric-lime accents, animated workflow visuals, and responsive sections designed to help explain your product.
+Give your AI, automation, or SaaS product a polished online presence and product interface with Flowstate. This premium dark landing page pairs a refined editorial layout with a restrained soft-lime accent system, animated workflow visuals, and responsive sections designed to help explain your product.
 
-Built with plain HTML, CSS, and vanilla JavaScript, Flowstate includes both a marketing landing page and a multi-view workspace dashboard. It is easy to customize and does not require a framework, build process, or paid dependency. Use the interactive workflow examples to demonstrate sales automation, support triage, content operations, or internal team processes.
+Built with plain HTML, CSS, and vanilla JavaScript, Flowstate includes both a marketing landing page and a multi-view workspace dashboard. A centralized `config.js` lets buyers rebrand the logo, brand name, contact email, color palette, typography, workspace name, and profile details without digging through every page. Deeper HTML, CSS, and JavaScript customization remains completely open. It does not require a framework, build process, or paid dependency. Use the interactive workflow examples to demonstrate sales automation, support triage, content operations, or internal team processes.
 
 ### Highlights
-- Modern dark UI with a distinctive lime accent palette
+- Premium dark UI with refined spacing, typography, and soft-lime accents\n- Centralized configuration for brand, colors, fonts, contact details, and workspace identity
 - Responsive desktop, tablet, and mobile layouts
 - Animated hero workflow dashboard and floating cards
 - Scroll reveal effects and subtle CSS motion
