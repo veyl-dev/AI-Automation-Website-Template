@@ -12,7 +12,8 @@ Give your AI, automation, or SaaS product a polished online presence and product
 Built with plain HTML, CSS, and vanilla JavaScript, Flowstate includes both a marketing landing page and a multi-view workspace dashboard. A centralized `config.js` lets buyers rebrand the logo, brand name, contact email, color palette, typography, workspace name, and profile details without digging through every page. The contact address is a clearly marked placeholder and must be replaced before launch. Deeper HTML, CSS, and JavaScript customization remains completely open. It does not require a framework, build process, or paid dependency. Use the interactive workflow examples to demonstrate sales automation, support triage, content operations, or internal team processes.
 
 ### Highlights
-- Premium dark UI with refined spacing, typography, and soft-lime accents\n- Centralized configuration for brand, colors, fonts, contact details, and workspace identity
+- Premium dark UI with refined spacing, typography, and soft-lime accents
+- Centralized configuration for brand, colors, fonts, contact details, and workspace identity
 - Responsive desktop, tablet, and mobile layouts
 - Animated hero workflow dashboard and floating cards
 - Scroll reveal effects and subtle CSS motion
