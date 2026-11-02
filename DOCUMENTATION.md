@@ -1,5 +1,5 @@
 # Flowstate — AI Automation Website Template
-Version 1.1.0
+Version 1.2.0
 
 Thank you for choosing Flowstate. This is a responsive, static HTML website template for AI automation, workflow automation, SaaS, and productivity products.
 
@@ -7,7 +7,7 @@ Thank you for choosing Flowstate. This is a responsive, static HTML website temp
 - `index.html` — complete single-page landing page
 - `dashboard.html` — responsive multi-view SaaS dashboard UI kit
 - `assets/css/style.css` — layout, responsive styles, colors, and motion
-- `assets/js/main.js` — navigation, reveal effects, workflow-template switcher
+- `assets/js/config.js` — centralized brand, theme, contact, and workspace configuration\n- `assets/js/main.js` — navigation, reveal effects, workflow-template switcher
 - `assets/css/dashboard.css` and `assets/js/dashboard.js` — dashboard layout and demo interactions
 - `assets/img/favicon.svg` — browser icon
 - `README.md`, `CHANGELOG.md`, and `LICENSE`
@@ -33,10 +33,10 @@ Keep the `assets` directory beside `index.html`; do not rename asset paths unles
 
 ## 4. Customize the template
 ### Brand and content
-Open `index.html` and replace the Flowstate name, logo letter, headings, descriptions, testimonials, feature copy, pricing, and footer text with your own brand content.
+Start with `assets/js/config.js`. Change the brand name, logo mark, contact email, accent/background/surface colors, typography, workspace name, and profile details in one place. The configuration is loaded by both the landing page and dashboard.
 
 ### Colors and typography
-Open `assets/css/style.css`. The main theme variables are at the top of the file:
+For deeper styling, edit the design tokens at the top of `assets/css/style.css` and `assets/css/dashboard.css`. The configuration file overrides the shared brand and theme tokens on both pages.
 - `--bg`: page background
 - `--text`: primary text
 - `--muted`: secondary text
@@ -47,12 +47,12 @@ Open `assets/css/style.css`. The main theme variables are at the top of the file
 Open `assets/js/main.js` and edit the `templates` object. Each template contains a title, description, and ordered workflow steps. The four sample tabs are Sales, Support, Content, and Operations.
 
 ### Links and contact details
-Search `index.html` for `hello@example.com` and replace it with your real support or sales email. Update all section links and pricing destinations. The email links are examples only; no contact form or lead storage backend is included.
+Set `brand.contactEmail` and `links` in `assets/js/config.js`, then update any product-specific destinations in `index.html`. The email links are examples only; no contact form or lead storage backend is included.
 
 ### Pricing and integrations
 The pricing, customer quote, usage metrics, and integration logos/names are illustrative sample content. Replace them with accurate details for your own product before publishing.
 
-## 5. Animation and accessibility
+### Launch checklist\n- Replace the fictional brand, sample copy, testimonial, metrics, pricing, and integration examples with truthful product information.\n- Set your support email and primary call-to-action destination.\n- Review every navigation and pricing link.\n- Connect your own forms, authentication, billing, integrations, and product APIs if required.\n- Test both pages at desktop, tablet, and mobile widths before publishing.\n\n## 5. Animation and accessibility
 - Scroll reveal effects use the browser's Intersection Observer API.
 - Decorative motion uses CSS keyframes.
 - The navigation toggle is keyboard-operable.
