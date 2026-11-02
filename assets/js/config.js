@@ -5,7 +5,7 @@ window.FLOWSTATE_CONFIG = {
   brand: {
     name: "Flowstate",
     mark: "f",
-    contactEmail: "hello@example.com",
+    contactEmail: "hello@yourdomain.com",
     tagline: "Make work flow."
   },
   theme: {
