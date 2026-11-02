@@ -1,0 +1,51 @@
+name: Build Codester submission package
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Playwright
+        run: |
+          npm init -y
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Start local preview
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/flowstate-server.log 2>&1 &
+          for i in {1..20}; do
+            curl -fsS http://127.0.0.1:4173/ >/dev/null && break
+            sleep 1
+          done
+      - name: Capture Codester preview and screenshots
+        run: node scripts/capture-codester-assets.mjs
+      - name: Assemble buyer source ZIP
+        run: |
+          mkdir -p dist/package
+          cp index.html README.md DOCUMENTATION.md CHANGELOG.md LICENSE dist/package/
+          cp -R assets dist/package/
+          cd dist
+          zip -r Flowstate-AI-Automation-Website-Template-v1.0.0.zip package
+          zip -r Flowstate-Codester-Screenshots.zip screenshots
+      - name: Upload submission assets
+        uses: actions/upload-artifact@v4
+        with:
+          name: codester-submission-v1.0.0
+          path: |
+            dist/Flowstate-AI-Automation-Website-Template-v1.0.0.zip
+            dist/Flowstate-Codester-Screenshots.zip
+            dist/codester-preview.png
+            dist/codester-icon.png
+          if-no-files-found: error
+          retention-days: 30
