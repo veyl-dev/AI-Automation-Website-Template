@@ -7,7 +7,7 @@ Thank you for choosing Flowstate. This is a responsive, static HTML website temp
 - `index.html` — complete single-page landing page
 - `dashboard.html` — responsive multi-view SaaS dashboard UI kit
 - `assets/css/style.css` — layout, responsive styles, colors, and motion
-- `assets/js/config.js` — centralized brand, theme, contact, and workspace configuration\n- `assets/js/main.js` — navigation, reveal effects, workflow-template switcher
+- `assets/js/config.js` — centralized brand, theme, optional contact, and workspace configuration\n- `assets/js/main.js` — navigation, reveal effects, workflow-template switcher
 - `assets/css/dashboard.css` and `assets/js/dashboard.js` — dashboard layout and demo interactions
 - `assets/img/favicon.svg` — browser icon
 - `README.md`, `CHANGELOG.md`, and `LICENSE`
@@ -33,7 +33,7 @@ Keep the `assets` directory beside `index.html`; do not rename asset paths unles
 
 ## 4. Customize the template
 ### Brand and content
-Start with `assets/js/config.js`. Change the brand name, logo mark, contact email, accent/background/surface colors, typography, workspace name, and profile details in one place. The configuration is loaded by both the landing page and dashboard.
+Start with `assets/js/config.js`. Change the brand name, logo mark, accent/background/surface colors, typography, workspace name, and profile details in one place. The `brand.contactEmail` value is blank by default; add your own email address only if you want the email-based CTA links enabled. The configuration is loaded by both the landing page and dashboard.
 
 ### Colors and typography
 For deeper styling, edit the design tokens at the top of `assets/css/style.css` and `assets/css/dashboard.css`. The configuration file overrides the shared brand and theme tokens on both pages.
@@ -47,12 +47,12 @@ For deeper styling, edit the design tokens at the top of `assets/css/style.css` 
 Open `assets/js/main.js` and edit the `templates` object. Each template contains a title, description, and ordered workflow steps. The four sample tabs are Sales, Support, Content, and Operations.
 
 ### Links and contact details
-Set `brand.contactEmail` to your real support address (the default `hello@yourdomain.com` is only a placeholder) and update `links` in `assets/js/config.js`, then review product-specific destinations in `index.html`. The email links are examples only; no contact form or lead storage backend is included.
+Optionally set `brand.contactEmail` to your own support address in `assets/js/config.js`. When it is blank, email-based CTA links fall back to the pricing section and the footer Contact link is hidden. Review product-specific destinations in `index.html`. No contact form or lead storage backend is included.
 
 ### Pricing and integrations
 The pricing, customer quote, usage metrics, and integration names are illustrative sample content. The landing page uses generic text-symbol marks rather than official partner logos. Replace all examples with accurate details and only use customer quotes and brand assets you have permission to publish.
 
-### Launch checklist\n- Replace the fictional brand, sample copy, testimonial, metrics, pricing, and integration examples with truthful product information.\n- Replace `hello@yourdomain.com` in `assets/js/config.js` with your real support email.\n- Set your support email and primary call-to-action destination.\n- Review every navigation and pricing link.\n- Connect your own forms, authentication, billing, integrations, and product APIs if required.\n- Test both pages at desktop, tablet, and mobile widths before publishing.\n\n## 5. Animation and accessibility
+### Launch checklist\n- Replace the fictional brand, sample copy, testimonial, metrics, pricing, and integration examples with truthful product information.\n- Optionally add your own support email to `brand.contactEmail` in `assets/js/config.js` if you want email-based CTA links.\n- Set your primary call-to-action destination.\n- Review every navigation and pricing link.\n- Connect your own forms, authentication, billing, integrations, and product APIs if required.\n- Test both pages at desktop, tablet, and mobile widths before publishing.\n\n## 5. Animation and accessibility
 - Scroll reveal effects use the browser's Intersection Observer API.
 - Decorative motion uses CSS keyframes.
 - The navigation toggle is keyboard-operable.
@@ -76,7 +76,7 @@ This is a frontend website template, not a functioning automation platform. It d
 - **Styles or images are missing:** make sure the `assets` folder is in the same directory as `index.html`; check filename capitalization.
 - **Fonts look different:** check internet access or change the font variables in the CSS.
 - **Menu does not open:** ensure `assets/js/main.js` is present and loaded after the page markup.
-- **Email buttons do not work:** replace the example email address with your own.
+- **Email CTA links do not open an email:** add your own address to `brand.contactEmail` in `assets/js/config.js`.
 - **Workflow tab content does not change:** make sure the JavaScript file has not been renamed and that the browser has JavaScript enabled.
 
 ## 11. Support
