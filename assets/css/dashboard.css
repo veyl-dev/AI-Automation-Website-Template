@@ -7,3 +7,92 @@ body{font-size:14px;letter-spacing:-.01em;background:radial-gradient(ellipse at 
 .toolbar{gap:12px;margin-bottom:17px}.search-box{border-radius:9px;padding-inline:13px;min-width:270px}.search-box input{font-size:11px;padding:12px 0}.toolbar select{border-radius:9px;padding:11px 13px;font-size:11px}table{min-width:760px}th{padding:16px 18px;font-size:9px}td{padding:17px 18px;font-size:11px}.table-icon{width:32px;height:32px;border-radius:9px}.table-title{font-size:11px}.table-title+small{font-size:9px}.pill{font-size:9px;padding:6px 9px}.table-foot{padding:15px 18px;font-size:9px}.integration-cards{gap:15px}.integration-card{padding:19px;border-radius:12px;grid-template-columns:44px 1fr auto}.app-logo{width:42px;height:42px;border-radius:11px}.integration-card h3{font-size:12px}.integration-card p,.integration-card>small{font-size:9px}.connected{font-size:9px}.integration-card>button{padding:10px 12px;border-radius:7px;font-size:10px}.timeline{padding:7px 15px}.timeline-date{font-size:9px;padding:19px 0}.timeline-item{gap:15px;padding:20px 0}.timeline-mark{width:35px;height:35px;border-radius:10px}.timeline-item b{font-size:11px}.timeline-item p{font-size:10px;line-height:1.7}.timeline-item small,.timeline-item>em{font-size:9px}.settings-grid{grid-template-columns:210px 1fr;gap:15px;max-width:1020px}.settings-menu{border-radius:12px;padding:11px}.settings-menu button{padding:12px;border-radius:8px;font-size:11px}.settings-form{padding:27px}.settings-form h2{font-size:16px}.settings-form>p{font-size:10px}.settings-form>label:not(.toggle-row){font-size:10px}.settings-form input:not([type=checkbox]),.settings-form select{padding:12px;border-radius:8px;font-size:11px}.toggle-row b{font-size:10px}.toggle-row small{font-size:9px}.app-footer{font-size:9px;padding-top:18px}
 @media(max-width:1100px){.sidebar{width:235px}.main-area{margin-left:235px}.topbar{padding:0 25px}.content-wrap{padding:28px 25px}.stat-card{padding:16px}.stats-grid{gap:11px}.panel{padding:17px}}
 @media(max-width:700px){.sidebar{width:270px;padding:25px 18px}.topbar{height:64px;padding:0 17px}.content-wrap{padding:25px 16px}.page-heading h1{font-size:25px}.page-heading p{font-size:11px}.page-heading .primary-button,.page-heading .secondary-button{font-size:9px;padding:10px 11px}.stats-grid{gap:9px}.stat-card{padding:13px;min-height:148px;border-radius:11px}.stat-card>strong{font-size:23px}.stat-top{font-size:9px}.stat-icon{width:28px;height:28px}.dashboard-grid{gap:10px;margin-top:10px}.panel{padding:15px;border-radius:11px}.panel-heading h2{font-size:12px}.chart-panel{min-height:300px}.integration-cards{grid-template-columns:1fr}.settings-grid{grid-template-columns:1fr}.settings-menu{display:flex;overflow:auto}.settings-menu button{white-space:nowrap}.toolbar{flex-wrap:wrap}.search-box{flex:1;min-width:180px}.table-foot span{display:none}.app-footer{font-size:8px}}
+
+
+/* Mobile layout correction — keep these rules after all desktop polish. */
+@media (max-width: 700px) {
+  html, body { width: 100%; min-width: 0; overflow-x: hidden; }
+  .app-shell { width: 100%; min-width: 0; overflow-x: clip; }
+  .sidebar {
+    width: min(300px, 86vw);
+    max-width: 86vw;
+    padding: 22px 17px;
+    transform: translateX(-105%);
+    background: #101611;
+    box-shadow: 18px 0 48px rgba(0,0,0,.48);
+    z-index: 30;
+  }
+  .sidebar.open { transform: translateX(0); }
+  .main-area { width: 100%; min-width: 0; margin-left: 0; }
+  .topbar {
+    width: 100%;
+    min-width: 0;
+    height: 64px;
+    padding: 0 14px;
+    gap: 10px;
+  }
+  .mobile-menu { flex: 0 0 28px; width: 28px; padding: 4px 0; }
+  .breadcrumb {
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 11px;
+  }
+  .breadcrumb span { padding: 0 5px; }
+  .top-actions { flex: 0 0 auto; gap: 8px; }
+  .demo-pill { padding: 7px 8px; font-size: 8px; white-space: nowrap; }
+  .icon-button { width: 30px; height: 32px; font-size: 16px; }
+  .top-avatar { width: 30px; height: 30px; }
+  .content-wrap {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    padding: 24px 16px 28px;
+  }
+  .page-heading {
+    width: 100%;
+    min-width: 0;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .page-heading > div { min-width: 0; flex: 1 1 auto; }
+  .page-heading h1 { font-size: clamp(22px, 6vw, 28px); line-height: 1.2; overflow-wrap: anywhere; }
+  .page-heading p { max-width: 100%; }
+  .page-heading .primary-button,
+  .page-heading .secondary-button { flex: 0 0 auto; }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .stat-card { min-width: 0; padding: 14px; }
+  .stat-card > strong { font-size: clamp(19px, 5.5vw, 25px); }
+  .stat-top { gap: 7px; }
+  .stat-top > span:first-child { min-width: 0; }
+  .sparkline { right: 10px; bottom: 13px; gap: 3px; }
+  .sparkline i { width: 4px; }
+  .dashboard-grid { grid-template-columns: minmax(0, 1fr); width: 100%; min-width: 0; }
+  .panel { min-width: 0; width: 100%; }
+  .chart-panel { overflow: hidden; }
+  .panel-heading { min-width: 0; gap: 10px; }
+  .panel-heading > div { min-width: 0; }
+  .panel-heading select { max-width: 112px; }
+  .chart-legend { flex-wrap: wrap; gap: 8px 14px; margin-left: 32px; }
+  .chart { min-width: 0; }
+  .chart-plot { min-width: 0; }
+  .integration-cards { grid-template-columns: minmax(0, 1fr); }
+  .settings-grid { grid-template-columns: minmax(0, 1fr); }
+  .toolbar { width: 100%; min-width: 0; }
+  .search-box { min-width: 0; }
+  .table-scroll { max-width: 100%; }
+  .app-footer { flex-wrap: wrap; }
+}
+@media (max-width: 380px) {
+  .content-wrap { padding-left: 12px; padding-right: 12px; }
+  .topbar { padding-left: 10px; padding-right: 10px; gap: 7px; }
+  .top-actions { gap: 6px; }
+  .demo-pill { font-size: 7px; padding: 6px; }
+  .page-heading { flex-wrap: wrap; }
+  .page-heading .primary-button,
+  .page-heading .secondary-button { margin-left: auto; }
+  .stat-card { padding: 11px; }
+}
