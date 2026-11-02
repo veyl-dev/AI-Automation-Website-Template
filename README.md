@@ -12,6 +12,9 @@ A responsive, animation-rich landing page concept for an AI workflow and automat
 - Reduced-motion accessibility support
 - Centralized CSS and lightweight JavaScript
 
+## Marketplace package
+A Codester packaging workflow builds the buyer ZIP, marketplace preview PNG, icon PNG, and screenshot ZIP. See `CODESTER-LISTING.md` and run the **Build Codester submission package** workflow in GitHub Actions.
+
 ## Run locally
 Open index.html in a browser, or run a local static server:
 
