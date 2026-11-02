@@ -37,7 +37,7 @@ window.FLOWSTATE_CONFIG = {
   const root = document.documentElement;
   const theme = config.theme || {};
   const vars = {
-    "--lime": theme.accent,
+    "--lime": theme.accent,\n    "--accent": theme.accent,
     "--bg": theme.background,
     "--panel": theme.panel,
     "--panel2": theme.panelRaised,
@@ -63,14 +63,14 @@ window.FLOWSTATE_CONFIG = {
       name.append(dot);
     }
   });
-  if (brand.name) document.title = document.title.replace(/Flowstate/g, brand.name);
+  if (brand.name) {\n    document.title = document.title.replace(/Flowstate/g, brand.name);\n    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);\n    const nodes = [];\n    while (walker.nextNode()) nodes.push(walker.currentNode);\n    nodes.forEach(node => { node.nodeValue = node.nodeValue.replace(/Flowstate/gi, brand.name); });\n  }
   if (brand.contactEmail) {
     document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
       const subject = link.href.includes("?") ? link.href.slice(link.href.indexOf("?")) : "";
       link.href = "mailto:" + brand.contactEmail + subject;
     });
   }
-  const workspace = config.workspace || {};
+  const links = config.links || {};\n  const primaryCta = document.querySelector(".header-actions .button");\n  if (primaryCta && links.primaryCta) primaryCta.href = links.primaryCta;\n  const dashboardLink = document.querySelector(".main-nav a[href=\"dashboard.html\"]");\n  if (dashboardLink && links.dashboard) dashboardLink.href = links.dashboard;\n  const workspace = config.workspace || {};
   const switcher = document.querySelector(".workspace-switch");
   if (switcher && workspace.name) {
     const label = switcher.querySelector("b");
