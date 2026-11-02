@@ -15,6 +15,13 @@ for (const [name, selector] of [['02-workflows', '#workflows'], ['03-integration
 await page.setViewportSize({ width: 390, height: 844 });
 await page.goto(base, { waitUntil: 'networkidle' });
 await page.screenshot({ path: 'dist/screenshots/05-mobile.png' });
+await page.setViewportSize({ width: 1440, height: 1000 });
+await page.goto(base + '/dashboard.html', { waitUntil: 'networkidle' });
+await page.screenshot({ path: 'dist/screenshots/06-dashboard-overview.png' });
+await page.getByRole('button', { name: /Workflows/ }).click();
+await page.screenshot({ path: 'dist/screenshots/07-dashboard-workflows.png' });
+await page.getByRole('button', { name: /Integrations/ }).click();
+await page.screenshot({ path: 'dist/screenshots/08-dashboard-integrations.png' });
 await page.goto(base + '/assets/img/codester-preview.svg', { waitUntil: 'load' });
 await page.setViewportSize({ width: 800, height: 400 });
 await page.screenshot({ path: 'dist/codester-preview.png' });
