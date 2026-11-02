@@ -35,8 +35,9 @@ jobs:
           mkdir -p dist/package
           cp index.html README.md DOCUMENTATION.md CHANGELOG.md LICENSE dist/package/
           cp -R assets dist/package/
-          cd dist
-          zip -r Flowstate-AI-Automation-Website-Template-v1.0.0.zip package
+          cd dist/package
+          zip -r ../Flowstate-AI-Automation-Website-Template-v1.0.0.zip .
+          cd ..
           zip -r Flowstate-Codester-Screenshots.zip screenshots
       - name: Upload submission assets
         uses: actions/upload-artifact@v4
