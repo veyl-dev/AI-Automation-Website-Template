@@ -5,7 +5,7 @@ window.FLOWSTATE_CONFIG = {
   brand: {
     name: "Flowstate",
     mark: "f",
-    contactEmail: "hello@yourdomain.com",
+    contactEmail: "", // Add your own contact email here when customizing the template.
     tagline: "Make work flow."
   },
   theme: {
@@ -71,12 +71,15 @@ window.FLOWSTATE_CONFIG = {
     while (walker.nextNode()) nodes.push(walker.currentNode);
     nodes.forEach(node => { node.nodeValue = node.nodeValue.replace(/Flowstate/gi, brand.name); });
   }
-  if (brand.contactEmail) {
-    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-      const subject = link.href.includes("?") ? link.href.slice(link.href.indexOf("?")) : "";
-      link.href = "mailto:" + brand.contactEmail + subject;
-    });
-  }
+  document.querySelectorAll("[data-email-link]").forEach(link => {
+    if (brand.contactEmail && brand.contactEmail.trim()) {
+      const subject = link.dataset.emailSubject ? "?subject=" + encodeURIComponent(link.dataset.emailSubject) : "";
+      link.href = "mailto:" + brand.contactEmail.trim() + subject;
+      link.hidden = false;
+    } else if (link.hasAttribute("data-contact-only")) {
+      link.hidden = true;
+    }
+  });
   const links = config.links || {};
   const primaryCta = document.querySelector(".header-actions .button");
   if (primaryCta && links.primaryCta) primaryCta.href = links.primaryCta;
